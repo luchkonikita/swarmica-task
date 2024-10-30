@@ -1,5 +1,6 @@
-import { PropsWithChildren, useState } from "react";
+import { useState, type PropsWithChildren } from "react";
 import { useDebounce } from "use-debounce";
+import { ArrowPathIcon, WindowIcon } from "@heroicons/react/16/solid";
 
 import useArticleListQuery from "./services/useArticleListQuery";
 import useCategoriesQuery from "./services/useCategoriesQuery";
@@ -8,7 +9,6 @@ import Article from "./components/Article";
 import Filter from "./components/Filter";
 
 import "./ArticleList.css";
-import { ArrowPathIcon, WindowIcon } from "@heroicons/react/16/solid";
 
 const ArticleList = () => {
   /** Default locale must be available in the upper scope already, so this hardcoded value won't be needed. */

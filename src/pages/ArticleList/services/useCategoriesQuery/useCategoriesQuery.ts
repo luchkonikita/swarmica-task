@@ -11,6 +11,7 @@ const categoriesSchema = z.object({
 });
 
 const fetchCategories = async () => {
+  /** TODO: Store API URL in .env and paths in some constant. */
   const response = await fetch(
     "http://localhost:3000/api/categories?ordering=name",
     {

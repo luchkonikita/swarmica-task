@@ -1,8 +1,8 @@
+import { type PropsWithChildren } from "react";
 import {
   ChevronDownIcon,
   MagnifyingGlassIcon,
 } from "@heroicons/react/16/solid";
-import { PropsWithChildren } from "react";
 
 interface Props {
   term: string;
