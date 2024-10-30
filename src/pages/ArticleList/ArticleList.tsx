@@ -33,6 +33,14 @@ const ArticleList = () => {
   const { isLoading: isCategoriesLoading, data: categoriesData } =
     useCategoriesQuery();
 
+  /**
+   * TODO: This condition is only used to avoid content jumping and for the sake of the test task.
+   * In the real world, with a multi-page app, this metadata might be preloaded before user visits the index page and be available at the rendering time.
+   */
+  if (isInstanceLoading || isCategoriesLoading) {
+    return null;
+  }
+
   let filter = <></>;
   let content = <></>;
 
@@ -69,6 +77,7 @@ const ArticleList = () => {
             <Article
               title={result.highlight.title}
               body={result.highlight.body}
+              href={result.publicUrls[locale]}
             />
           </li>
         ))}
