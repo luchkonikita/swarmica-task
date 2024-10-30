@@ -1,0 +1,6 @@
+.Article {
+  hl {
+    display: inline-block;
+    @apply bg-gray-200;
+  }
+}
